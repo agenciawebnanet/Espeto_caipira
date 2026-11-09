@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#181411">
+<meta name="description" content="Cardápio digital do Espeto Caipira. Confira os espetinhos na brasa e as porções da casa.">
+<title>Espeto Caipira • Cardápio digital</title>
+<link rel="stylesheet" href="style.css">
+<script defer src="menu.js"></script>
+</head>
+<body>
+<header class="top"><div class="wrap bar"><a class="wordmark" href="#" aria-label="Espeto Caipira, início"><span class="brand-icon">✦</span> ESPETO <b>CAIPIRA</b></a><button class="outline" id="top-cart">Sacola <span id="badge">0</span></button></div></header>
+<main>
+<section class="hero">
+  <div class="wrap hero-body">
+    <img class="logo" src="assets/logo.webp" alt="Espeto Caipira" width="339" height="253">
+    <div class="kicker"><span></span> CARDÁPIO DIGITAL</div>
+    <h1>Direto da<br><em>brasa.</em></h1>
+    <p>Espetinhos na brasa e porções para compartilhar.</p>
+    <a class="primary" href="#cardapio">Explorar cardápio <span aria-hidden="true">↓</span></a>
+  </div>
+</section>
+<section class="menu wrap" id="cardapio">
+  <div class="kicker"><span></span> NA BRASA E À MESA</div>
+  <h2>O que vai pedir?</h2>
+  <div class="toolbar">
+    <nav aria-label="Categorias"><button data-category="todos" aria-pressed="true">Tudo</button><button data-category="espetos" aria-pressed="false">Espetinhos</button><button data-category="porcoes" aria-pressed="false">Porções</button></nav>
+    <label class="search"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg><input type="search" id="search" placeholder="Buscar no cardápio" aria-label="Buscar no cardápio"></label>
+  </div>
+  <div id="catalog"></div>
+</section>
+</main>
+<footer><div class="wrap">ESPETO CAIPIRA <span>Imagens ilustrativas</span></div></footer>
+<button class="floating primary" id="bottom-cart" hidden><span id="bottom-count"></span><span>Ver sacola</span><strong id="bottom-total"></strong></button>
+<dialog id="size-dialog"><div class="sheet-head"><h2 id="size-title"></h2><button class="close" aria-label="Fechar" data-close>×</button></div><p>Escolha o tamanho da porção.</p><div id="sizes"></div></dialog>
+<dialog id="cart-dialog"><div class="sheet-head"><h2>Sua sacola</h2><button class="close" aria-label="Fechar" data-close>×</button></div><div id="cart-list"></div><form id="cart-summary">
+  <label class="checkout-field">Como quer receber?
+    <select id="fulfillment" required>
+      <option value="">Selecione uma opção</option>
+      <option>Retirada no local</option>
+      <option>Entrega a combinar</option>
+    </select>
+  </label>
+  <label class="checkout-field">Preferência de pagamento
+    <select id="payment" required>
+      <option value="">Selecione uma opção</option>
+      <option>Pix</option>
+      <option>Cartão de crédito</option>
+      <option>Cartão de débito</option>
+      <option>Dinheiro</option>
+      <option>A combinar</option>
+    </select>
+  </label>
+  <div class="total"><span>Total dos itens</span><strong id="total"></strong></div>
+  <button id="whatsapp" class="primary" type="submit">Finalizar no WhatsApp ↗</button>
+  <p class="hint">Confirme o pagamento e os detalhes da retirada ou entrega pelo WhatsApp.</p>
+</form></dialog>
+<div id="toast" role="status"></div>
+</body>
+</html>
