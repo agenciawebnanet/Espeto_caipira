@@ -166,3 +166,9 @@ byId('cart-summary').addEventListener('submit', event => {
 
 renderMenu();
 updateCart();
+
+byId('view-menu').addEventListener('click', () => {
+  byId('demo').hidden = true;
+  byId('site-content').hidden = false;
+  byId('menu-heading').focus();
+});
