@@ -31,3 +31,28 @@ dialog{border:1px solid var(--border);background:#241b16;color:var(--cream);bord
 .card:hover .drink-photo{transform:translateY(-50%) scale(1.07)}
 
 .photo:has(.drink-photo){aspect-ratio:1}
+
+.ui-icon{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}
+.toolbar{display:grid;justify-content:stretch;gap:12px}
+.toolbar .search{width:100%;max-width:420px}
+.categories button,.cart-action,#top-cart{display:inline-flex;align-items:center;justify-content:center;gap:7px}
+.categories button{white-space:normal}
+.card-bottom{align-items:center}
+.card-bottom .price{white-space:normal;line-height:1.2;min-width:0}
+@media(max-width:600px){
+  .menu{padding-top:24px}
+  .menu>h2{font-size:clamp(1.85rem,8vw,2.55rem);margin:5px 0 12px}
+  .toolbar{gap:10px;padding-bottom:12px}
+  .categories{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:6px}
+  .categories button{grid-column:span 3;min-width:0;min-height:57px;flex-direction:column;gap:4px;padding:6px 3px;border-radius:11px;text-align:center;font-size:.7rem;line-height:1.15}
+  .categories button:nth-child(n+5){grid-column:span 4}
+  .categories .ui-icon{width:18px;height:18px}
+  .category-title{font-size:clamp(1.4rem,6vw,1.8rem);margin:17px 0 10px}
+  .card-body{padding:8px}
+  .card h3{overflow-wrap:anywhere}
+  .card-bottom{flex-direction:row;align-items:center;gap:4px}
+  .card-bottom .price{font-size:.88rem}
+  .card-bottom .add{flex:none;align-self:center}
+  .floating{padding-inline:11px;gap:5px;font-size:clamp(.73rem,3.3vw,.93rem)}
+  .cart-action{gap:4px}
+}
