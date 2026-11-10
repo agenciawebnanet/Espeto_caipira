@@ -25,3 +25,9 @@ dialog{border:1px solid var(--border);background:#241b16;color:var(--cream);bord
 .demo-panel h1{font:700 clamp(2rem,8vw,3rem)/1.02 Georgia,serif;letter-spacing:-.04em;margin:0}
 .demo-panel p{color:var(--muted);line-height:1.55;margin:14px 0 20px}
 .demo-panel button{width:100%}
+
+.photo{position:relative}
+.drink-photo{position:absolute;left:0;top:50%;width:100%;aspect-ratio:1;transform:translateY(-50%);background-repeat:no-repeat;transition:transform .45s}
+.card:hover .drink-photo{transform:translateY(-50%) scale(1.07)}
+
+.photo:has(.drink-photo){aspect-ratio:1}
